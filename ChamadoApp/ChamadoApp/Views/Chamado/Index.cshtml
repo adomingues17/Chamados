@@ -1,0 +1,24 @@
+﻿@model List<ChamadoApp.Models.Chamado>
+
+<h2>Chamados</h2>
+<p>
+    <a asp-action="Create" class="btn-primary">Novo chamado</a>
+</p>
+
+<table class="table">
+    <tr>
+        <th>Titulo</th>
+        <th>Status</th>
+        <th>Cliente</th>
+    </tr>
+    @foreach (var chamado in Model)
+    {
+        <tr>
+            <td>@chamado.Titulo</td>
+            <td>@chamado.Status</td>
+            <td>@chamado.Cliente?.Nome</td>
+        </tr>
+    }
+
+
+</table>

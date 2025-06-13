@@ -1,0 +1,33 @@
+﻿@model Chamado
+@{
+    var clientes = ViewBag.Clientes as List<ChamadoApp.Models.Cliente>;
+    
+}
+
+<h2>Novo Chamado</h2>
+<form asp-action="Create" method="post">
+   
+    <label>Título</label>
+    <input asp-for="Titulo" class="form-control" />
+
+    <label>Descricao</label>
+    <label asp-for="Descricao" class="form-control"></label>
+   
+    <label>Status</label>
+    <input asp-for="Status" class="form-control" />
+    
+    <label>Cliente</label>
+    <select asp-for="ClienteId" class="form-control">
+        @foreach (var c in clientes)
+        {
+            <option value="@c.Id">@c.Nome</option>
+        }
+    </select>
+    <button type="submit">Salvar</button>
+</form>
+
+
+
+
+
+
