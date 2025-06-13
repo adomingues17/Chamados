@@ -1,13 +1,13 @@
 ﻿@model Cliente
+
 <form method="post">
     <div class="border p-3 mt-4">
         <h2 class="text-primary">Editar Cadastro do Cliente</h2>
 
-        @foreach(var modelErro in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        @foreach(var modelError in ViewData.ModelState.Values.SelectMany(v => v.Errors))
         {
-            <div class="text-danger">
-                <!--****************-->
-                ! @modelErro.ErrorMessage  
+            <div class="text-danger">                
+                ! @modelError.ErrorMessage  
             </div>
         }
 
@@ -16,16 +16,24 @@
             <input asp-for="Nome" class="form-control"/>
             <span asp-validation-for="Nome" class="text-danger"></span>
         </div>
-        <div>
+        <div class="mb-3">
             <label asp-for="Email" class="p-0"></label>
-            
-           
+            <input asp-for="Email" class="form-control"/>
+            <span asp-validation-for="Email" class="text-danger"></span>          
         </div>
-
-
-
-
-
+        <div class="mb-3">
+            <label asp-for="Telefone" class="p-0"></label>
+            <input asp-for="Telefone" class="form-control" />
+            <span asp-validation-for="Telefone" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-6">
+                <button type="submit" class="btn btn-outline-primary form-control">Atualizar Cadastro</button>
+            </div>
+            <div class="col-6 col-md-6">
+                <a asp-controller="Cliente" asp-action="Index" class="btn btn-outline-secondary form-control">Voltar</a>
+            </div>
+        </div>
 
     </div>
 </form>

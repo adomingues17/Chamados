@@ -165,3 +165,4 @@ D:\impacta\aspNet\JaulaDez\ChamadoApp\ChamadoApp\obj\Debug\net8.0\refint\Chamado
 D:\impacta\aspNet\JaulaDez\ChamadoApp\ChamadoApp\obj\Debug\net8.0\ChamadoApp.pdb
 D:\impacta\aspNet\JaulaDez\ChamadoApp\ChamadoApp\obj\Debug\net8.0\ChamadoApp.genruntimeconfig.cache
 D:\impacta\aspNet\JaulaDez\ChamadoApp\ChamadoApp\obj\Debug\net8.0\ref\ChamadoApp.dll
+D:\impacta\aspNet\JaulaDez\ChamadoApp\ChamadoApp\obj\Debug\net8.0\ChamadoApp.sourcelink.json
